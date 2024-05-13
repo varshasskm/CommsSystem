@@ -35,6 +35,7 @@ public class VendorService {
         String message = commReq.getMessage();
         String recepientID = commReq.getRecepientId();
 
+        //the selection of provider should be randomised 
         for(Vendor vendor : vendorList){
             if(vendor.getAccounts().get(accountType) != null){
                 if(vendor.getChannels().get(channelType)!=null){
