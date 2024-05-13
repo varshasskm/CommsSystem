@@ -33,12 +33,13 @@ public class VendorService {
         ChannelType channelType = commReq.getChannelType();
         AccountType accountType = commReq.getType();
         String message = commReq.getMessage();
+        String recepientID = commReq.getRecepientId();
 
         for(Vendor vendor : vendorList){
             if(vendor.getAccounts().get(accountType) != null){
                 if(vendor.getChannels().get(channelType)!=null){
                     if(vendor.isVendorAvailable(accountType)){
-                        if(vendor.sendNotification(accountType,channelType,message)){
+                        if(vendor.sendNotification(accountType,channelType,message,recepientID)){
                             return "The communication has been processed successfully";
                         }
                     }

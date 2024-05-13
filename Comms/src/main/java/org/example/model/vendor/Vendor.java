@@ -64,9 +64,9 @@ public class Vendor {
         return accounts.get(accountType).isVendorAccountAvailable(availabilityUrl);
     }
 
-    public boolean sendNotification(AccountType accountType,ChannelType channelType, String message)  {
+    public boolean sendNotification(AccountType accountType,ChannelType channelType, String message,String recepientId)  {
         String[] authenticationHeaders = accounts.get(accountType).getAuthenticationHeaders();
-        return channels.get(channelType).sendNotification(authenticationHeaders, message);
+        return channels.get(channelType).sendNotification(authenticationHeaders, message,recepientId);
     }
 
 

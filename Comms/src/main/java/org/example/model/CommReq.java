@@ -4,12 +4,14 @@ public class CommReq {
     private String id;
     private ChannelType channelType;
     private AccountType type;
+    private String recepientId;
     private String message;
 
-    public CommReq(String id, ChannelType channelType, AccountType type, String message) {
+    public CommReq(String id, ChannelType channelType, AccountType type,String recepientId, String message) {
         this.id = id;
         this.channelType = channelType;
         this.type = type;
+        this.recepientId = recepientId;
         this.message = message;
     }
 
@@ -36,10 +38,20 @@ public class CommReq {
         this.type = type;
     }
 
+    public String getRecepientId() {
+        return recepientId;
+    }
+
+    public void setRecepientId(String recepientId) {
+        this.recepientId = recepientId;
+    }
     public String getMessage() {
         return message;
     }
 
+    public void setMessage(String message) {
+        this.message = message;
+    }
     public boolean isValid(){
         //write logic to validate
         if(true){

@@ -40,7 +40,7 @@ public class Channel {
         return connection;
     }
 
-    public boolean sendNotification(String[] authenticationHeaders, String message) {
+    public boolean sendNotification(String[] authenticationHeaders, String message,String recipientId) {
 
             //HttpURLConnection connection = createHttpURLConnection(authenticationHeaders);
             // set message body, headers, etc, connection.setRequestMethod
